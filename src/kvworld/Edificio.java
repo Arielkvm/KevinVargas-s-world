@@ -1,6 +1,7 @@
 package kvworld;
 
 public class Edificio extends Base{
+    private String Nombre;
     private int P_recursos;
     private int Recurso1;
     private int Recurso2;
@@ -8,20 +9,12 @@ public class Edificio extends Base{
     
     public Edificio(){}
     
-    public void Edificio(int PR, int R1, int R2, int R3){
+    public void Edificio(String name, int PR, int R1, int R2, int R3){
+    this.Nombre = name;
     this.P_recursos = PR;
     this.Recurso1 = R1; 
     this.Recurso2 = R2;
     this.Recurso3 = R3;
-    }
-    
-    public void Construir(int R1, int R2, int n, int m){
-        R1 = --n;
-        R2 = -- m;
-    }
-    
-    public void Recolectar(int R, int Add){
-    R = ++ Add;
     }
 
     public int getP_recursos() {

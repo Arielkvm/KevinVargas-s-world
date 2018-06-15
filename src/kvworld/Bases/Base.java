@@ -1,17 +1,23 @@
-package kvworld;
+package kvworld.Bases;
 
-public class Base {
-    private int Vida;
+public abstract class Base {
+	private String nombre;
+    protected int Vida;
     private int Mejoras;
     private int Espera;
     
     public Base(){}
     
-    public void Base(int vida, int mejoras, int espera){
+    public Base(String nombre, int vida, int mejoras, int espera){
+    	this.nombre = nombre;
         this.Vida = vida;
         this.Mejoras = mejoras;
         this.Espera = espera;
     }
+    
+    public abstract boolean ManejoMejoras(int Nmejoras, boolean Mejorar);
+    
+    public abstract int ManejoCiclos(int x, int y);
 
     public int getVida() {
         return Vida;
@@ -36,5 +42,13 @@ public class Base {
     public void setEspera(int Espera) {
         this.Espera = Espera;
     }
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
     
 }

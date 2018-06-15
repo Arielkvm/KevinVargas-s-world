@@ -1,6 +1,6 @@
-package kvworld;
+package kvworld.Bases;
 
-public abstract class Raza {
+public class Raza {
     private String nombre;
     private Boolean Ataque;
     private Boolean Recursos;
@@ -8,13 +8,21 @@ public abstract class Raza {
     
     public Raza(){}
     
-    public void Raza(String nombre, boolean ataque, boolean recusos, boolean vida){
+    public Raza(String nombre, boolean ataque, boolean recusos, boolean vida){
         this.nombre = nombre;
         this.Ataque = ataque;
         this.Recursos = recusos;
         this.Vida = vida;
     }
+    
+	public void crearRaza(String name, Boolean B1, Boolean B2, Boolean B3) {
+		this.setNombre(name);
+		this.setAtaque(B1);
+		this.setRecursos(B2);
+		this.setVida(B3);	
+	}
 
+    
     public String getNombre() {
         return nombre;
     }
